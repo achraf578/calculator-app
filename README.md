@@ -1,34 +1,49 @@
-# Calculator App 🧮
+# Calculator App
 
-A refined Python calculator application featuring both a modern **Tkinter Graphical Interface (GUI)** and an interactive **Command-Line Interface (CLI)** mode.
+A Python calculator application featuring both a Graphical User Interface (GUI) built with Tkinter and an interactive Command-Line Interface (CLI) mode.
 
-## Features
+## Overview
 
-- **Modern Dark Theme GUI**: Built using Tkinter with styled components, Catppuccin color scheme, keyboard shortcuts, and calculation history.
-- **CLI Mode**: Interactive terminal mode for continuous operations.
-- **Arithmetic Engine**: Core mathematical operations encapsulated cleanly in `calculator.py`.
+The Calculator App provides basic and intermediate mathematical computation capabilities. The core math logic is encapsulated separately in a dedicated module, allowing both desktop GUI and terminal interfaces to share the exact same underlying logic.
 
-## Quick Start
+## Key Features
 
-### 1. Graphical Interface (GUI Mode)
-Run `main.py` directly:
+- Graphical Interface (GUI): Modern dark-themed window constructed with Tkinter, supporting mouse clicks, full keyboard input bindings, hover states, and calculation history log.
+- Command-Line Interface (CLI): Interactive terminal mode supporting operation chaining.
+- Modular Design: Clean separation between GUI view components, CLI controller routines, and arithmetic logic.
+- Exception Handling: Graceful error trapping for division by zero and invalid input formats.
+
+## System Requirements
+
+- Python 3.8 or higher.
+- Tkinter library (included by default in standard Python Windows installations).
+
+## Installation and Execution
+
+### Running the GUI Application (Default)
+To launch the graphical window interface, execute:
 ```bash
 python main.py
 ```
 
-### 2. Command-Line Interface (CLI Mode)
-Pass the `--cli` flag:
+### Running the CLI Application
+To launch the interactive command-line mode in terminal, pass the `--cli` flag:
 ```bash
 python main.py --cli
 ```
 
-## Structure
+## Project File Structure
 
 ```
 calculator-app/
-├── calculator.py   # Core math module
-├── gui.py          # Tkinter GUI implementation
-├── main.py         # Application entry point
-├── .gitignore
-└── README.md
+│
+├── calculator.py   # Core math module (addition, subtraction, multiplication, division)
+├── gui.py          # Tkinter graphical user interface implementation
+├── main.py         # Primary application entry point routing CLI/GUI execution
+├── .gitignore      # Standard Git exclusion file
+└── README.md       # Project documentation
 ```
+
+## License
+
+This project is licensed under the MIT License.
